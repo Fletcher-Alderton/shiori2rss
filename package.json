@@ -1,0 +1,9 @@
+{
+  "name": "shiori2rss",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "xmlbuilder2": "^3.1.1"
+  }
+}
