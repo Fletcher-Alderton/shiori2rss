@@ -75,6 +75,12 @@ function updateRSSFeed(bookmarks) {
         item.ele('link').txt(encodeURI(bookmark.url)); // Encode the URL
         item.ele('guid').txt(bookmark.url); // Adding a guid element as per RSS specification
         item.ele('content:encoded').txt(`<a href="${encodeURI(bookmark.url)}">Read More</a>`); // Encode the URL
+        // adds a preview image if availabe
+        if (bookmark.imageURL) {
+            item.ele('enclosure')
+                .att('url', `${apiBaseUrl}${bookmark.imageURL}`)
+                .att('type', 'image/jpeg'); // May need to get the image type dynamicly
+        }
     });
 
     const rssFeed = root.end({ prettyPrint: true });

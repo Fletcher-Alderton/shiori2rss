@@ -1,0 +1,10 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore the generated XML feed
+rss-feed.xml
+
+# Ignore environment configuration files
+.env
+.env.local
+.env.*.local
